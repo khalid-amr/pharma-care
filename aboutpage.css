@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Reset and font import */
+        * {
+            margin: 0;
+            font-family: 'Poppins', sans serif;
+        }
+
+        /* Body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            background: url(background.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.642);
+            width: 100%;
+            z-index: 1;
+            margin-bottom: 53px;
+            backdrop-filter: blur(30px);
+            border-radius: 2.5px;
+        }
+
+        /* Navigation links styling */
+        .nav a {
+            text-decoration: none;
+            color: #2d0d7c;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 20px;
+            padding: 13px;
+            transition: all 0.1% ease;
+        }
+
+        .nav a:hover {
+            border: none;
+            background-color: #2d0d7c;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+
+        /* Navigation title styling */
+        nav h3 {
+            color: #2d0d7c;
+            font-size: 2rem;
+        }
+
+        /* Logo styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo h3 {
+            color: rgba(3, 4, 94, 0.8);
+            font-size: 30px;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.863);
+            border-radius: 8px;
+            color: #000000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #2d5c86;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }

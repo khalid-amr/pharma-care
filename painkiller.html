@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma Care</title>
+    <link rel="shortcut icon" href="medicine.jpg" type="image/x-icon">
+     <link rel="stylesheet" href="painkiller.css">
+</head>
+
+<body>
+    <nav>
+
+        <h3>pharma care</h3>
+
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="registerpage.html">Register</a>
+            <a href="account.html">account</a>
+            <a href="contact.html">contact us</a>
+            <a href="cart.html">cart</a>
+            <a href="about page .html">about us</a>
+        </div>
+    </nav>
+
+    <img class="sss" src="pain.png" alt="Pharmacy Banner">
+    <!-- Categories section -->
+    <section class="categories">
+        <div class="category">
+            <img src="panadol-extra.jpg" alt="panadol extra">
+            <h4>panadol extra</h4>
+            <span>ج.م175</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="naprosyn.jpg" alt="naprosyn">
+            <h3>naprosyn</h3>
+            <span>ج.م24</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="ketofan.jpg" alt="ketofan">
+            <h3>ketofan</h3>
+            <span>ج.م39</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="voltaren.jpg" alt="voltaren">
+            <h3>voltaren</h3>
+            <span>ج.م245</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="brufen1.jpg" alt="brufen">
+            <h3>brufen </h3>
+            <span>ج.م282</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for Buy button alert
+        document.addEventListener("DOMContentLoaded", () => {
+            const buyButtons = document.querySelectorAll(".buy-btn");
+
+            buyButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const productName = event.target.closest(".category").querySelector("h3, h4").textContent;
+                    const productPrice = event.target.closest(".category").querySelector("span").textContent;
+                    alert(`You selected ${productName} for ${productPrice}.`);
+                    // Add logic to handle the purchase or add to the cart
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

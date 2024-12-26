@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma Care</title>
+    <link rel="shortcut icon" href="medicine.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="vaitamins.css">
+</head>
+
+<body>
+        <!-- Navigation bar -->
+
+    <nav>
+
+        <h3>pharma care</h3>
+
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="registerpage.html">Register</a>
+            <a href="account.html">account</a>
+            <a href="contact.html">contact us</a>
+            <a href="cart.html">cart</a>
+            <a href="about page .html">about us</a>
+        </div>
+    </nav>
+    <!-- Banner Image -->
+
+    <img class="sss" src="vitamin.png" alt="Pharmacy Banner">
+    <!-- Categories Section -->
+
+    <section class="categories">
+        <div class="category">
+            <img src="omega-3.jpg" alt="omega-3">
+            <h4>omega-3</h4>
+            <span>ج.م900</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="c-retard.jpg" alt="c-retard">
+            <h3>c-retard</h3>
+            <span>ج.م22</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="calcidol-calcium.jpg" alt="calcidol-calcium">
+            <h3>calcidol-calcium</h3>
+            <span>ج.م70</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="centrum.jpg" alt="centrum">
+            <h3>centrum</h3>
+            <span>ج.م599</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="feroglobin.jpg" alt="feroglobin">
+            <h3>feroglobin</h3>
+            <span>ج.م110</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+    </section>
+    <!-- JavaScript for Buy button alert -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buyButtons = document.querySelectorAll(".buy-btn");
+
+            buyButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const productName = event.target.closest(".category").querySelector("h3, h4").textContent;
+                    const productPrice = event.target.closest(".category").querySelector("span").textContent;
+                    alert(`You selected ${productName} for ${productPrice}.`);
+                    // Add logic to handle the purchase or add to the cart
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

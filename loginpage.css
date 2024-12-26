@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* General styles for resetting margins and applying the main font */
+*{
+    margin: 0;
+    font-family: 'Poppins', sans serif; 
+}
+/* Body background styling */
+body{
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Navigation bar styles */
+nav{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.642);
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 535px;
+  backdrop-filter: blur(30px);
+  border-radius: 2.5px;
+
+}
+/* Navigation links */
+.nav a{
+    text-decoration: none;
+  color: #2d0d7c;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+  padding: 13px;
+  transition: all 0.1% ease;
+}
+/* Hover effect for navigation links */
+.nav a:hover{
+    border: none;
+    background-color: #2d0d7c;
+    color:white;
+    border-radius: 50px;
+    text-decoration: none;
+
+}
+/* Navigation header text */
+nav h3 {
+    color:#2d0d7c;
+    font-size: 2rem;
+  
+  }
+
+
+/* Center box layout */
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    
+}
+/* Form container styles */
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 4px 15px;
+    /* border: #03045E solid 2px; */
+    border-radius: 2rem;
+    background-color: #ffffffea;
+}
+/* Text alignment and spacing */
+span{
+    color: #000000;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+h2{
+    color: #000000;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+/* Input field styles */
+.input-field{
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+}
+
+.input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #000000;
+    padding: 0 0 0 45px;
+    background: rgba(21, 21, 21, 0.192);
+    margin-top: 25px ;
+}
+/* Placeholder text styling */
+::-webkit-input-placeholder{
+    color: #00000081;
+}
+/* Submit button styling */
+.submit{
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgb(12, 30, 232);
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 25px ;
+    
+}
+/* Submit button hover effect */
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.9);
+}
+/* Additional text and link section styling */
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

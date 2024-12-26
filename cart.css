@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset and font import */
+* {
+    margin: 0;
+    font-family: 'Poppins', sans serif; 
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.642);
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 53px;
+    backdrop-filter: blur(30px);
+    border-radius: 2.5px;
+}
+
+/* Navigation title styling */
+nav h3 {
+    color: #2d0d7c;
+    font-size: 2rem;
+}
+
+/* Navigation links styling */
+.nav a {
+    text-decoration: none;
+    color: #2d0d7c;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px;
+    padding: 13px;
+    transition: all 0.1% ease;
+}
+
+.nav a:hover {
+    border: none;
+    background-color: #2d0d7c;
+    color: white;
+    border-radius: 50px;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h3 {
+    color: rgba(3, 4, 94, 0.8);
+    font-size: 30px;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+/* Content container styling */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.963);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart and Add Product sections styling */
+.cart-section, .add-product-section {
+    margin-bottom: 30px;
+}
+
+/* Cart table styling */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #dddddde3;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cart summary styling */
+.cart-summary {
+    text-align: right;
+}
+
+.cart-summary p {
+    margin: 5px 0;
+}
+
+/* Button styling */
+.btn {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #005fa3;
+}
+
+/* Advanced styling for Add New Product section */
+.add-product-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.add-product-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-section form input,
+.add-product-section form select,
+.add-product-section form button {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Product selection dropdown styling */
+.add-product-section form select {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.add-product-section form select:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+}
+
+/* Input fields and buttons styling */
+.add-product-section form input:focus,
+.add-product-section form button:hover {
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+}
+
+.add-product-section form input,
+.add-product-section form select {
+    background-color: #f9f9f9;
+}
+
+.add-product-section form button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-product-section form button:hover {
+    background-color: #005fa3;
+}
+
+.btn,
+.add-product-section form button {
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn:hover,
+.add-product-section form button:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+/* Responsive design for form */
+@media (max-width: 768px) {
+    .add-product-section form {
+        padding: 20px;
+    }
+
+    .add-product-section form input,
+    .add-product-section form select,
+    .add-product-section form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Checkout button styling */
+.checkout-btn {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.checkout-btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}

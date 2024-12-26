@@ -1,0 +1,140 @@
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global reset for margin and font styles */
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Styling for the header section */
+header {
+    background-color: #090a0b;
+    color: rgb(255, 255, 255); 
+    padding: 1rem; 
+    text-align: center;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f0f8ff; 
+    color: #333; 
+    background: url(background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; 
+    position: fixed; 
+    align-items: center; 
+    justify-content: space-around; 
+    height: 70px; 
+    background-color: rgba(255, 255, 255, 0.642); 
+    width: 100%; 
+    z-index: 1; 
+    margin-bottom: 535px; 
+    backdrop-filter: blur(30px); 
+    margin-top: -100px; 
+    border-radius: 2.5px; 
+}
+
+/* Logo text styling */
+nav h3 {
+    color: #2d0d7c;
+    font-size: 2rem; 
+}
+
+/* Navigation links styling */
+.nav a {
+    text-decoration: none; 
+    color: #2d0d7c;
+    font-size: 20px; 
+    font-weight: 700; 
+    margin: 20px; 
+    padding: 13px; 
+    transition: all 0.1s ease; 
+}
+
+/* Hover effect for navigation links */
+.nav a:hover {
+    border: none; 
+    background-color: #2d0d7c; 
+    color: white; 
+    border-radius: 50px; 
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo text styling */
+.logo h3 {
+    color: rgba(3, 4, 94, 0.8);
+    font-size: 30px; 
+}
+
+/* Container styling for forms or centered content */
+.container {
+    max-width: 600px; 
+    margin: 50px auto;
+    padding: 20px; 
+    background: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-top: 100px;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center; 
+    color: #283be4; 
+}
+
+/* Form layout styling */
+form {
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* Label styling */
+label {
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+/* Input, textarea, and button styling */
+input, textarea, button {
+    margin-bottom: 15px;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+/* Focus effect for input fields */
+input:focus, textarea:focus {
+    border-color: #007BFF; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* Button styling */
+button {
+    background-color: #283be4; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+/* Hover effect for buttons */
+button:hover {
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2); 
+}

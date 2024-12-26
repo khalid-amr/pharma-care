@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>Pharma Care</title> 
+    <link rel="shortcut icon" href="medicine.jpg" type="image/x-icon"> <!-- Favicon for the site -->
+    <link rel="stylesheet" href="children.css">
+</head>
+
+<body>
+    <nav>
+        <h3>pharma care</h3> <!-- Site name in the nav -->
+
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="registerpage.html">Register</a>
+            <a href="account.html">account</a>
+            <a href="contact.html">contact us</a>
+            <a href="cart.html">cart</a>
+            <a href="about page .html">about us</a>
+        </div>
+    </nav>
+
+    <img class="sss" src="babysection.png" alt="Pharmacy Banner">
+
+    <section class="categories">
+        <!-- Category items -->
+        <div class="category">
+            <img src="VIDROP.jpg" alt="VIDROP">
+            <h4>VIDROP</h4>
+            <span>20ج.م</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="panadol-baby.jpg" alt="panadol-baby">
+            <h3>panadol baby</h3>
+            <span>ج.م175</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="BRUFEN-baby.jpg" alt="BRUFEN baby">
+            <h3>BRUFEN baby</h3>
+            <span>ج.م163</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="DENTNOIX.jpg" alt="DENTNOIX">
+            <h3>DENTNOIX</h3>
+            <span>ج.م115</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="sudocream.jpg" alt="sudocream">
+            <h3>sudocream</h3>
+            <span>ج.م781</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buyButtons = document.querySelectorAll(".buy-btn"); // Selecting all buy buttons
+
+            buyButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const productName = event.target.closest(".category").querySelector("h3, h4").textContent;
+                    const productPrice = event.target.closest(".category").querySelector("span").textContent;
+                    alert(`You selected ${productName} for ${productPrice}.`);
+                    // Add logic to handle the purchase or add to the cart
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma Care</title>
+    <link rel="shortcut icon" href="medicine.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="cold&flu.css">
+</head>
+
+<body>
+    <!-- Navigation bar with links -->
+    <nav>
+        <h3>pharma care</h3>
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="registerpage.html">Register</a>
+            <a href="account.html">account</a>
+            <a href="contact.html">contact us</a>
+            <a href="cart.html">cart</a>
+            <a href="about page .html">about us</a>
+        </div>
+    </nav>
+
+    <!-- Banner image -->
+    <img class="sss" src="COLD&flu.png" alt="Pharmacy Banner">
+
+    <!-- Categories section -->
+    <section class="categories">
+        <!-- Individual product card -->
+        <div class="category">
+            <img src="panadol-day.jpg" alt="panadol day">
+            <h4>panadol day</h4>
+            <span>ج.م50</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="congestal.jpg" alt="Congestal">
+            <h3>Congestal</h3>
+            <span>ج.م31</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="co-renitee.jpg" alt="co-renitee">
+            <h3>co-renitee</h3>
+            <span>ج.م70</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="tamiflu.jpg" alt="tamiflu">
+            <h3>tamiflu</h3>
+            <span>ج.م240</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+        <div class="category">
+            <img src="otrivin.jpg" alt="Otrivin">
+            <h3>Otrivin</h3>
+            <span>ج.م24</span>
+            <hr>
+            <a href="cart.html">
+                <button class="buy-btn">Buy</button>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for handling Buy button interactions
+        document.addEventListener("DOMContentLoaded", () => {
+            const buyButtons = document.querySelectorAll(".buy-btn");
+
+            buyButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    // Extracting product details on button click
+                    const productName = event.target.closest(".category").querySelector("h3, h4").textContent;
+                    const productPrice = event.target.closest(".category").querySelector("span").textContent;
+                    // Displaying selected product details
+                    alert(`You selected ${productName} for ${productPrice}.`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

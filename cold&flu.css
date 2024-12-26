@@ -1,0 +1,153 @@
+        /* Importing the Poppins font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Global styles for resetting margin, padding, and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Styling the body with a background image and colors */
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            background: url("background.jpg") no-repeat center center fixed;
+            background-size: cover;
+
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.642);
+            margin-bottom: 53px;
+            backdrop-filter: blur(30px);
+            border-radius: 2.5px;
+        }
+
+        /* Navigation links styles */
+        .nav a {
+            text-decoration: none;
+            color: #2d0d7c;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 20px;
+            padding: 13px;
+            transition: all 0.1% ease;
+        }
+
+        .nav a:hover {
+            background-color: #2d0d7c;
+            color: white;
+            border-radius: 50px;
+        }
+
+        nav h3 {
+            color: #2d0d7c;
+            font-size: 2rem;
+
+        }
+
+          /* Categories section grid */
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual category card styles */
+        .category {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Styling the category images */
+        .category img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling category titles and prices */
+        .category h3,
+        .category h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0077cc;
+        }
+
+        .category span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .category hr {
+            margin: 10px 0;
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        /* Banner image style */
+        .sss {
+            width: 200px;
+            margin-bottom: 25px;
+            margin-top: -15px;
+        }
+
+        /* Button styles for buying */
+        .buy-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #0077cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #005fa3;
+            transform: scale(1.05);
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav .nav a {
+                font-size: 14px;
+                margin: 5px 10px;
+            }
+
+            .categories {
+                padding: 0 10px;
+            }
+        }

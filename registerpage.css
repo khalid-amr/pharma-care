@@ -1,0 +1,116 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    font-family: 'Poppins', sans serif; 
+}
+/* Body styling with background image */
+body {
+  font-family: Arial, sans-serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+}
+/* Navigation bar styling */
+
+nav{
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.642);
+width: 100%;
+z-index: 1;
+margin-bottom: 670px;
+backdrop-filter: blur(30px);
+border-radius: 2.5px;
+
+}
+/* Styling for navigation links */
+
+.nav a{
+  text-decoration: none;
+color: #2d0d7c;
+font-size: 20px;
+font-weight: 700;
+margin: 20px;
+padding: 13px;
+transition: all 0.1% ease;
+}
+/* Hover effect for links */
+.nav a:hover{
+  border: none;
+  background-color: #2d0d7c;
+  color:white;
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+/* Navigation title */
+
+nav h3 {
+  color:#2d0d7c;
+  font-size: 2rem;
+
+}
+
+/* Register form container */
+
+.register-container {
+  background: rgba(255, 255, 255, 0.963);
+  padding: 50px ;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin-top: 5rem;
+}
+/* Heading inside register container */
+
+.register-container h2 {
+  margin-bottom: 20px;
+  color: #283be4;
+}
+/* Styling for form inputs */
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container input[type="text"],
+.register-container input[type="tel"],
+.register-container input[type="number"],
+.register-container select {
+  width: 100%;
+  padding: 10px ;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Button styling */
+
+.register-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #283be4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Hover effect for button */
+
+.register-container button:hover {
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+
+}
+/* Login link styling */
+
+.login-link {
+  color: rgb(38, 0, 255);
+  text-decoration: none;
+}
+

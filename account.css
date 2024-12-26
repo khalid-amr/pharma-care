@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    font-family: 'Poppins', sans serif; 
+}
+/* styling for body */
+body {
+  font-family: Arial, sans-serif;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+/* styling for navigation br  */
+nav{
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.642);
+width: 100%;
+z-index: 1;
+margin-bottom: 500px;
+backdrop-filter: blur(30px);
+border-radius: 2.5px;
+
+/* Styling for the title in the navigation bar */
+}
+nav h3 {
+  color:#2d0d7c;
+  font-size: 2rem;
+}
+/* stayling for the navigation links */
+.nav a{
+  text-decoration: none;
+  color: #2d0d7c;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+  padding: 13px;
+  transition: all 0.1% ease;
+}
+/* hover effect for the navigation links */
+.nav a:hover{
+  border: none;
+  background-color: #2d0d7c;
+  color:white;
+  border-radius: 50px;
+}
+
+/* Styling for the profile container */
+.profile-container {
+  background-color: rgba(255, 255, 255, 0.963);
+  border-radius: 20px;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+/* Styling for the profile header */
+.profile-header {
+  margin-bottom: 20px;
+}
+/* Styling for the profile picture */
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  right: 400px;
+  margin-bottom: 15px;
+  margin-left: 20%;
+}
+/* Styling for the title */
+.title{
+  position: relative;
+  bottom: 50px;
+  margin: 0;
+}
+
+/* Styling for the profile data */
+.data {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Styling for the section headers */
+h2{
+  font-size: 25px;
+}
+
+.profile-title {
+  font-size: 15px;
+  color: #000000a9;
+  margin: 0;
+}
+/* Styling for the button */
+.button {
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 25px;
+  height: 65px;
+  outline: none;
+  width: 50%;
+  background: rgb(44, 47, 225);
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 25px;
+}
+/* Hover effect for the button */
+.button:hover {
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+  
+}

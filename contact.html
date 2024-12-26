@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="shortcut icon" href="medicine.jpg" type="image/x-icon">
+</head>
+
+<body>
+     <!-- header bar -->
+    <nav>
+        <h3>pharma care</h3>
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="registerpage.html">Register</a>
+            <a href="account.html">account</a>
+            <a href="contact.html">contact us</a>
+            <a href="cart.html">cart</a>
+            <a href="about page .html">about us</a>
+        </div>
+    </nav>
+           <!-- container  -->
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+
+            <button id="button" type="button">Send Message</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2024 Your Company. All rights reserved. <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+        <!-- java script alert -->
+
+    <script>
+        let ok = document.getElementById("button");
+        ok.onclick = function () {
+            if (document.getElementById("message").value != "") {
+                alert("Your message was sent");
+            } else {
+                alert("Please enter a message");
+            }
+        };
+    </script>
+</body>
+
+</html>

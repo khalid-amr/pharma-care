@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css"> <!-- Link to external CSS for styling -->
+    <link rel="shortcut icon" href="medicine.jpg" type="image/x-icon"> <!-- Favicon for the page -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Array of available products with their names and prices
+            const products = [
+                { name: "vidrop", price: 25 },
+                { name: "panadol baby", price: 175 },
+                { name: "brufen baby", price: 163 },
+                { name: "dentinox", price: 115 },
+                { name: "sudo cream", price: 781 },
+                { name: "burfen", price: 282 },
+                { name: "panadol extra", price: 175 },
+                { name: "voltaren", price: 245 },
+                { name: "naprosyn", price: 24 },
+                { name: "ketofan 50 mg", price: 39 },
+                { name: "centrum silver", price: 602 },
+                { name: "C-retard", price: 22 },
+                { name: "feroglobin", price: 100 },
+                { name: "omega-3", price: 900 },
+                { name: "clacidol calcium", price: 70 },
+                { name: "congestal", price: 31 },
+                { name: "panadol day", price: 50 },
+                { name: "Co-Renitnee", price: 70 },
+                { name: "tamiflu", price: 240 },
+                { name: "otrivin", price: 24 },
+                { name: "bapanthen", price: 70 },
+                { name: "neutrogena", price: 85 },
+                { name: "cetaphil", price: 530 },
+                { name: "panthenol", price: 249 },
+                { name: "isispharma", price: 399 },
+                { name: "zyrtec", price: 60 },
+                { name: "telfast", price: 23 },
+                { name: "aerius", price: 36 },
+                { name: "claritine", price: 72 },
+                { name: "chlorohistol", price: 85 }
+            ];
+
+            // Initialize the cart as an empty array
+            const cart = [];
+
+            // Function to render the cart and update the subtotal, tax, and total
+            const renderCart = () => {
+                const cartTableBody = document.getElementById("cart-table-body");
+                
+                // Generate HTML for each item in the cart
+                cartTableBody.innerHTML = cart.map((item, index) => `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>$${item.price.toFixed(2)}</td>
+                        <td>${item.quantity}</td>
+                        <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                        <td><button class="btn" onclick="removeItem(${index})">Remove</button></td>
+                    </tr>
+                `).join("");
+
+                // Calculate subtotal, tax (10%), and total
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const tax = subtotal * 0.1;
+                const total = subtotal + tax;
+
+                // Display the updated amounts in the cart summary
+                document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
+                document.getElementById("tax").textContent = `$${tax.toFixed(2)}`;
+                document.getElementById("total").textContent = `$${total.toFixed(2)}`;
+            };
+
+            // Function to remove an item from the cart by index
+            window.removeItem = (index) => {
+                cart.splice(index, 1); // Remove item from cart array
+                renderCart(); // Re-render the cart
+            };
+
+            // Populate the product dropdown list dynamically
+            const productSelect = document.getElementById("product-name");
+            products.forEach(product => {
+                const option = document.createElement("option");
+                option.value = product.name;
+                option.textContent = `${product.name} - $${product.price.toFixed(2)}`;
+                productSelect.appendChild(option);
+            });
+
+            // Event listener for adding a product to the cart
+            document.getElementById("add-product-form").addEventListener("submit", (event) => {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Get selected product and quantity from form
+                const name = document.getElementById("product-name").value;
+                const quantity = parseInt(document.getElementById("product-quantity").value, 10);
+                const product = products.find(p => p.name === name);
+
+                // Validate product selection and quantity
+                if (product && quantity > 0) {
+                    // Add product to the cart array
+                    cart.push({ name: product.name, price: product.price, quantity });
+                    renderCart(); // Re-render the cart
+                } else {
+                    alert("Please provide valid product details.");
+                }
+
+                // Reset the form after adding the product
+                document.getElementById("add-product-form").reset();
+            });
+
+            // Checkout button event handler
+            document.getElementById("checkout-btn").addEventListener("click", () => {
+                if (cart.length === 0) {
+                    alert("Your cart is empty! Please add items to your cart before proceeding to checkout.");
+                } else {
+                    alert("Proceeding to checkout...\nThank you for your purchase!");
+                    // Redirect to checkout page or show a confirmation message (this can be extended)
+                }
+            });
+
+            // Initial render of the cart (in case there are already items in the cart)
+            renderCart();
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <h3>pharma care</h3>
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="registerpage.html">Register</a>
+            <a href="account.html">account</a>
+            <a href="contact.html">contact us</a>
+            <a href="cart.html">cart</a>
+            <a href="about page .html">about us</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <section class="cart-section">
+            <h2>Shopping Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-table-body">
+                    <!-- Cart items will be dynamically rendered here -->
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                <p>Tax (10%): <span id="tax">$0.00</span></p>
+                <p>Total: <span id="total">$0.00</span></p>
+            </div>
+
+            <!-- Checkout button -->
+            <button id="checkout-btn" class="checkout-btn">Checkout</button>
+        </section>
+
+        <section class="add-product-section">
+            <h2>Add New Product</h2>
+            <form id="add-product-form">
+                <!-- Dropdown for selecting a product -->
+                <select id="product-name" required>
+                    <option value="" disabled selected>Select a Product</option>
+                    <!-- Products will be populated here dynamically -->
+                </select>
+                <!-- Input for specifying the quantity -->
+                <input type="number" id="product-quantity" placeholder="Quantity" min="1" required>
+                <!-- Button to add product to the cart -->
+                <button type="submit" class="btn">Add Product</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
